@@ -1,15 +1,15 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{prefix}}-tcp-service
-  namespace: {{namespace}}
+  name: {{ .Values.metadata.name }}-tcp-service
+  namespace: {{ .Values.metadata.namespace }}
   annotations:
     metallb.universe.tf/allow-shared-ip: "true"
 spec:
   selector:
-    app: {{prefix}}
+    app: {{ .Values.metadata.name }}
   type: LoadBalancer
-  loadBalancerIP: {{ip-nlb}}
+  loadBalancerIP: {{ .Values.ip-nlb }}
   ports:
   - name: 80-tcp
     port: 80

@@ -15,25 +15,25 @@ spec:
   template:
     metadata:
       labels:
-        app: {{prefix}}
+        app: {{ .Values.metadata.name }}
     spec:
       containers:
       - image: esphome/esphome:latest
         imagePullPolicy: Always
-        name: {{prefix}}
+        name: {{ .Values.metadata.name }}
         ports:
         - containerPort: 6052
           name: http
           protocol: TCP
         volumeMounts:
         - mountPath: /config
-          name: {{prefix}}
-          subPath: {{prefix}}
+          name: {{ .Values.metadata.name }}
+          subPath: {{ .Values.metadata.name }}
         env:
           - name: ESPHOME_DASHBOARD_USE_PING
             value: "true"        
       restartPolicy: Always
       volumes:
-      - name: {{prefix}}
+      - name: {{ .Values.metadata.name }}
         persistentVolumeClaim:
-          claimName: {{claim-Name}}
+          claimName: {{ .Values.claim-Name }}

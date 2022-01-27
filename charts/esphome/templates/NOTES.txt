@@ -1,1 +1,1 @@
-Install of {{.Name}} Ok!
+Install of {{ .Values.metadata.name }} Ok!

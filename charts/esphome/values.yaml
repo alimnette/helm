@@ -1,4 +1,6 @@
-namespace: landcenter
+metadata:
+  name: esphome
+  namespace: landcenter
 prefix: esphome
 ingress-tls-mode: staging # stagin/prod
 name-release: test

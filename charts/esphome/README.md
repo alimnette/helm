@@ -1,1 +1,1 @@
-Helm de {{prefix}}.
+Helm de {{ .Values.metadata.name }}.
