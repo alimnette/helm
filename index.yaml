@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  Esphome:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-01-27T23:41:07.303211658Z"
+    description: A Helm chart for Kubernetes
+    digest: a255aff4337314059477db9ebfbce2a76257805c478e61cad6a690f7144f76c7
+    name: Esphome
+    urls:
+    - https://github.com/alimnette/helm/releases/download/Esphome-0.1.0/Esphome-0.1.0.tgz
+    version: 0.1.0
   esphome:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -47,4 +57,4 @@ entries:
     urls:
     - https://github.com/alimnette/helm/releases/download/test-0.1.0/test-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-27T19:17:04.502091201Z"
+generated: "2022-01-27T23:41:07.303225658Z"
