@@ -2,5 +2,5 @@ apiVersion: v2
 name: Esphome
 description: A Helm chart for Kubernetes
 
-version: 0.2.0
+version: 0.3.0
 appVersion: "1.0.0"

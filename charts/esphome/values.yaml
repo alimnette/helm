@@ -2,7 +2,7 @@ metadata:
   name: esphome
   namespace: landcenter
 prefix: esphome
-ingress-tls-mode: staging # stagin/prod
-name-release: test
-ip-nlb: "192.168.10.201"
-claim-Name: "docker-nfs-41"
+ingress_tls_mode: staging # stagin/prod
+name_release: test
+ip_nlb: "192.168.10.201"
+claim_Name: "docker-nfs-41"

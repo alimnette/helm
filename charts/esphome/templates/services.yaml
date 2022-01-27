@@ -9,7 +9,7 @@ spec:
   selector:
     app: {{ .Values.metadata.name }}
   type: LoadBalancer
-  loadBalancerIP: {{ .Values.ip-nlb }}
+  loadBalancerIP: {{ .Values.ip_nlb }}
   ports:
   - name: 80-tcp
     port: 80
