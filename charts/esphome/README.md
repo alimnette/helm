@@ -1,1 +1,1 @@
-Helm de {{ .Values.metadata.name }}.
+Helm de Esphome.
