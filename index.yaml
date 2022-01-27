@@ -3,6 +3,15 @@ entries:
   test:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-01-27T18:29:05.896651818Z"
+    description: A Helm chart for Kubernetes
+    digest: 162b84b18a66ef0b63ced267af3817229a31f1d0b351834df9aaa4857f625059
+    name: test
+    urls:
+    - https://github.com/alimnette/helm/releases/download/test-0.2.0/test-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-01-27T10:26:07.212738728Z"
     description: A Helm chart for Kubernetes
     digest: 68ed007e90837650b4f85bc8fc12687add29aa8562950aaeea7b2d068a75ecde
@@ -10,4 +19,4 @@ entries:
     urls:
     - https://github.com/alimnette/helm/releases/download/test-0.1.0/test-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-27T10:26:07.212745828Z"
+generated: "2022-01-27T18:29:05.896658718Z"
