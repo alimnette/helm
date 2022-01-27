@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{prefix}}
+  name: {{ .Values.metadata.name }}
   namespace: landcenter
   labels:
-    app: {{prefix}}
+    app: {{ .Values.metadata.name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{prefix}}
+      app: {{ .Values.metadata.name }}
   strategy:
     type: Recreate
   template:
