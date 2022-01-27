@@ -1,0 +1,6 @@
+namespace: landcenter
+prefix: esphome
+ingress-tls-mode: staging # stagin/prod
+name-release: test
+ip-nlb: "192.168.10.201"
+claim-Name: "docker-nfs-41"

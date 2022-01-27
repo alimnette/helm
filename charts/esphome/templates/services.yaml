@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{prefix}}-tcp-service
+  namespace: {{namespace}}
+  annotations:
+    metallb.universe.tf/allow-shared-ip: "true"
+spec:
+  selector:
+    app: {{prefix}}
+  type: LoadBalancer
+  loadBalancerIP: {{ip-nlb}}
+  ports:
+  - name: 80-tcp
+    port: 80
+    protocol: TCP
+    targetPort: 6052

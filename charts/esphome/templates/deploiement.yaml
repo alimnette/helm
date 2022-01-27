@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{prefix}}
+  namespace: landcenter
+  labels:
+    app: {{prefix}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{prefix}}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{prefix}}
+    spec:
+      containers:
+      - image: esphome/esphome:latest
+        imagePullPolicy: Always
+        name: {{prefix}}
+        ports:
+        - containerPort: 6052
+          name: http
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /config
+          name: {{prefix}}
+          subPath: {{prefix}}
+        env:
+          - name: ESPHOME_DASHBOARD_USE_PING
+            value: "true"        
+      restartPolicy: Always
+      volumes:
+      - name: {{prefix}}
+        persistentVolumeClaim:
+          claimName: {{claim-Name}}
