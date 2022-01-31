@@ -46,4 +46,14 @@ entries:
     urls:
     - https://github.com/alimnette/helm/releases/download/Esphome-0.1.0/Esphome-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-27T23:58:07.341043615Z"
+  test:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-01-31T02:44:00.98753519Z"
+    description: A Helm chart for Kubernetes
+    digest: 3998cbba2b6974c6fc70ca492a6f7518197a2be49a1f112857eb5fb87a330044
+    name: test
+    urls:
+    - https://github.com/alimnette/helm/releases/download/test-0.4.0/test-0.4.0.tgz
+    version: 0.4.0
+generated: "2022-01-31T02:44:00.987556391Z"
