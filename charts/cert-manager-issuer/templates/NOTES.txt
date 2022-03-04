@@ -1,0 +1,1 @@
+Install of {{ .Values.metadata.name }} Ok!
