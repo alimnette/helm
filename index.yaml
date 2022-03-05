@@ -3,6 +3,15 @@ entries:
   cluster-issuer:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2022-03-05T00:07:15.661009637Z"
+    description: A Helm chart for Kubernetes
+    digest: 78ed68c46633c4951ee7594261a4123847e162a6c341f13bb0c646b07f471393
+    name: cluster-issuer
+    urls:
+    - https://github.com/alimnette/helm/releases/download/cluster-issuer-0.2.0/cluster-issuer-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2022-03-05T00:02:11.110853738Z"
     description: A Helm chart for Kubernetes
     digest: f06c2f3cf2fce32cb18c992adbff36db9624055b78be54bf9225b1fc85d886ac
@@ -10,4 +19,4 @@ entries:
     urls:
     - https://github.com/alimnette/helm/releases/download/cluster-issuer-0.1.0/cluster-issuer-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-05T00:02:11.110858339Z"
+generated: "2022-03-05T00:07:15.66101664Z"
