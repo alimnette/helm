@@ -1,4 +1,67 @@
 # Requirements
+- A kubernetes cluster
+- [Helm v3 or higher](https://helm.sh/docs/intro/install/)
+- [Cert Manager 1.9 or higher installed](https://cert-manager.io/docs/installation/)
+- An [OVH](http://www.ovh.com) account
+
+# Preparation
+Before you install anything, 2 mains tasks need to be completed.
+
+# OVH API Keys
+Obtaining API keys from your OVH account (in which your DNS zones are hosted) will allow this webhook to perform the necessary operations to help resolve Let’s Encrypt [DNS01 challenges](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge). In response to the DNS01 challenges, Let’s Encrypt will issue a valid TLS certiticate for your applications to use.
+
+1. Go to api.ovh.com console and log-in using your credentials
+2. Create a new OVH API key for this webhook (This needs to be done once per OVH account)
+    - Application name: cert-manager-webhook-ovh (or anything you’d like)
+    - Application description: API Keys for Cert Manager Webhook OVH (or anything you’d like)
+    - Validity: Unlimited
+        - Rights: (pre-populated)
+        - GET /domaine/zone/*
+        - PUT /domaine/zone/*
+        - POST /domaine/zone/*
+        - DELETE /domaine/zone/*
+    - Restrict IPs: Leave blank or restrict as you need.
+
+Securely take note of the ApplicationKey, ApplicationSecret and ConsumerKey.
+
+# Helm chart repository
+
+1. Add a new Helm repository
+```shell
+ helm repo add cert-manager-webhook-ovh-charts https://aureq.github.io/cert-manager-webhook-ovh/
+```
+2. Refresh the repository information
+```shell
+helm repo update
+```
+3. Search for all available charts in this repository
+```shell
+ helm search repo cert-manager-webhook-ovh-charts --versions
+ ```
+   Or list the latest development/unstable versions
+```shell
+ helm search repo cert-manager-webhook-ovh-charts --versions --devel
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [ExternalDNS](https://github.com/kubernetes-sigs/external-dns/) synchronizes exposed Kubernetes Services and Ingresses with DNS providers.
 
