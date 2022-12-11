@@ -1,4 +1,4 @@
-# ExternalDNS
+# Requirements
 
 [ExternalDNS](https://github.com/kubernetes-sigs/external-dns/) synchronizes exposed Kubernetes Services and Ingresses with DNS providers.
 
